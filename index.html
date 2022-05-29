@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width">
-  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+
 <body>
 <a href="index.html">Home</a>
 <a href="research.html">Research</a>
@@ -19,7 +45,7 @@
 </style>
 <figure>
   <div class="column">
-  <img src="PWK.png" alt="Drawing of a PWK lab mouse" style="width:100%; height=100%">
+  <img src="CZII.png" alt="Drawing of a CZECHII lab mouse" style="width:100%; height=100%">
   </div>
   <div class="column">
   <img src="WSB.png" alt="Drawing of WSB lab mouse" style="width:100%; height: 100%">
@@ -31,34 +57,22 @@
 </figure>
 
 <div class="row" id="top_grid">
-		<div class="col-24-24" id="self_pic">
+		<div class="column left" id="self_pic">
 			<div id="name_img_cont">
 				<img id="name_img" src="Emily_photo_cropped.JPG" alt="A photo of Emily outside" style="width: 266px; height: 223px;">
 			</div>
 		</div>
-	</div>
-
-<div class="row">
-		<div class="col-24-24" id="sep_div"></div>
-	</div>
-<div class="row" id="home_row">
-		<div class="col-1-24" id="margin"></div>
-		<div class="col-5-24" id="bio_pic_container">
-			<div id="bio_pic"></div>
-		</div>
-		<div class="col-1-24" id="margin"></div>
-		<div class="col-15-24" id="bio_text">
+		<div class="column right" id="bio_text">
 					
 			<p>
-				I am an evolutionary biologist
+				I am an evolutionary biologist seeking to understand how selection pressures act across developmental processes. I use genomics and molecular biology in this pursuit. Most of my work has focused on understanding the molecular evolution of spermatogenesis, and how spermatogenesis evolution shapes sex chromosome evolution and male hybrid sterility in house mice. More recently, I have started studying the evolution of the retina in fish. See my <a href="research.html">Research</a> page to find out more, and check out my publications and presentations <a href="publications.html">here</a>.
 			</p>
 
 			<p>
-				I am currently a postdoc in <a href="https://clark.genetics.utah.edu/">Nathan Clark's lab</a> at the Universit of Utah. I did my Ph.D. with <a href="https://www.thegoodlab.org/">Jeff Good</a> at the University of Montana and worked in <a href="https://wings.usc.edu/">Matt Dean's lab</a> at the University of Southern California as an undergraduate and master's student.</div>
+				I am currently a postdoc in <a href="https://clark.genetics.utah.edu/">Nathan Clark's lab</a> at the Universit of Utah. I did my Ph.D. with <a href="https://www.thegoodlab.org/">Jeff Good</a> at the University of Montana and worked in <a href="https://wings.usc.edu/">Matt Dean's lab</a> at the University of Southern California as an undergraduate and master's student.
 			</p>
 
 		</div>
-		<div class="col-2-24" id="margin"></div>
 	</div>
 
 </body>
