@@ -3,10 +3,15 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+* {
+  box-sizing: border-box;
+}
+
 /* Create two unequal columns that floats next to each other */
 .column {
   float: left;
   padding: 10px;
+  vertical-align: middle
 }
 
 .left {
@@ -62,6 +67,20 @@ figcaption {
 	</div>
 
 <h2>Murine rodent reproduction and evolution</h2>
+<div class="row" id="murine_grid">
+		<div class="column left" id="murine_sperm">
+			<div id="name_img_cont">
+				<img id="name_img" src="murine_sperm.png" alt="Drawings of representative murine sperm heads with zero, one, or three hooks" style="width: 100%; height: 100%;">
+			</div>
+		</div>
+		<div class="column right" id="murines_text">
+			<p>
+				Murine rodents include rats and mice from Europe, Africa, Asia, and Australia. They comprise the most rapid radiation in mammals and exhibit remarkable diversity in reproductive traits. This diversity is thought to reflect variation in the intensity of sexual selection among species, but this had not been tested in a phylogenetic framework. At the molecular level, genes involved in reproduction tend to evolve rapidly, but it is unclear if rapid molecular evolution is predominantly due to positive selection on genes underlying rapidly evolving reproductive traits. To test this, I am combining whole exome data collected from species spanning the murine radiation with previously published male reproductive data to perform phylogenetic comparative analyses of both phenotypic and molecular evolution on murine rodent reproductive traits.
+
+			</p>
+		</div>
+	</div>
+
 <h2>Fish retinal evolution</h2>
 </body>
 </html>
