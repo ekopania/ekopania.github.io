@@ -31,6 +31,13 @@
   display: table;
   clear: both;
 }
+
+.column_img {
+  display: inline-block
+  width: 50%
+  padding: 1px;
+}
+
 p {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -63,8 +70,12 @@ ol {
 <div class="row" id="outreach_grid">
 		<div class="column left" id="outreach_pic">
 			<div id="outreach_img_cont">
-				<img id="outreach_img" src="outreach2.jpg" alt="A photo of Emily doing science outreach" style="width: 50%; height: 50%;">
+				<div class="column_img">
+					<img id="outreach_img" src="outreach2.jpg" alt="A photo of Emily doing science outreach" style="width: 50%; height: 50%;">
+				</div>
+				<div class="column_img">
 				<img id="outreachLab_img" src="outreach1.jpg" alt="A photo of Emily doing outreach in the lab" style="width: 50%; height: 50%">
+				</div>
 			</div>
 		</div>
 		<div class="column right" id="bio_text">
