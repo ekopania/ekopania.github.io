@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="icon" href="initials.png">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -57,6 +58,42 @@ a.toplinks {
 	font-family: Arial, Helvetica, sans-serif; font-size:18px;
 	padding:10px;
 }
+<title>CSS-Only Rotating Banner</title>
+  <style>
+      /* Slider Wrapper */
+      .banner-container {
+          width: 100%;
+          max-width: 800px; /* Adjust maximum width */
+          height: 400px;    /* Adjust banner height */
+          margin: 0 auto;
+          overflow: hidden; /* Hides the extra images */
+          position: relative;
+      }
+
+      /* Moving track holding all images */
+      .banner-slider {
+          display: flex;
+          width: 400%; /* 100% multiplied by the number of images (3 images = 300%) */
+          height: 100%;
+          animation: rotateBanner 12s infinite; /* 12-second total loop duration */
+      }
+
+      /* Individual Images */
+      .banner-slider img {
+          width: 25%; /* 100% divided by number of images */
+          height: 100%;
+          object-fit: cover; /* Prevents images from distorting */
+      }
+
+      /* Animation Sequence */
+      /* Changes frame every 33% of the time, including pause windows */
+      @keyframes rotateBanner {
+          0%, 20% { transform: translateX(0); }          /* Image 1 */
+          25%, 45% { transform: translateX(-25%); }   /* Image 2 */
+          50%, 70% { transform: translateX(-50%); }   /* Image 3 */
+          75%, 95% { transform: translateX(-75%); }   /* Image 4 */
+          100% { transform: translateX(0); }              /* Loops back smoothly */
+      }
 </style>
 </head>
 
@@ -70,9 +107,21 @@ a.toplinks {
 
 <h1>Kopania Lab - Evolutionary Genomics</h1>
 
+<!--
+/* Single Image */
 <figure style="border: 2px solid; border-color: #590925;">
   <img src="homepage_research_image.png" alt="Drawings of lab mouse, mouse sperm, trout, and retina topography map" style="width:98%; height: 100%">
 </figure>
+-->
+
+<div class="banner-container">
+        <div class="banner-slider">
+            <img src="linesville_hatchery.jpg" alt="Linesville fish hatchery">
+            <img src="mouse_drawing.png" alt="Drawing of three mice">
+            <img src="steelhead_spawn_erie.jpg" alt="Steelhead swimming upstream near Lake Erie to spawn">
+            <img src="murine_sperm.png" alt="Drawings of sperm heads from different rodent species">
+        </div>
+    </div>
 
 <div class="row" id="top_grid">
 	<!--
