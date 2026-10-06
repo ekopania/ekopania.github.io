@@ -65,7 +65,7 @@ a.toplinks {
           width: 100%;
           max-width: 1000px; /* Adjust maximum width */
           height: 50px;    /* Adjust banner height */
-          margin: 10px;
+          margin: 0 auto;
           overflow: hidden; /* Hides the extra images */
           position: relative;
       }
@@ -74,15 +74,16 @@ a.toplinks {
       .banner-slider {
           display: flex;
           width: 400%; /* 100% multiplied by the number of images (3 images = 300%) */
-          height: 50%;
+          height: 100%;
           animation: rotateBanner 30s infinite; /* 12-second total loop duration */
       }
 
       /* Individual Images */
       .banner-slider img {
           width: 25%; /* 100% divided by number of images */
-          height: 50%;
+          height: 100%;
           object-fit: cover; /* Prevents images from distorting */
+          margin-left: 20px; margin-right: 20px;
       }
 
       /* Animation Sequence */
