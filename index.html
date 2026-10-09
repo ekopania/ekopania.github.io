@@ -58,6 +58,53 @@ a.toplinks {
 	font-family: Arial, Helvetica, sans-serif; font-size:18px;
 	padding:8px;
 }
+</style>
+
+<title>Hamburger navigation menu for mobile</title>
+  <style>
+      /* Style the hamburger navigation menu for mobile*/
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+
+      /* Hide the links inside the navigation menu (except for logo/home) */
+      .topnav #myLinks {
+        display: none;
+      }
+
+      /* Style navigation menu links */
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+
+      /* Style the hamburger menu */
+      .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      /* Add a grey background color on mouse-over */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Style the active link (or home/logo) */
+      .active {
+        background-color: #04AA6D;
+        color: white;
+      }
+  </style>
+
 <title>CSS-Only Rotating Banner</title>
   <style>
       /* Slider Wrapper */
@@ -76,10 +123,10 @@ a.toplinks {
           width: 400%; /* 100% multiplied by the number of images (3 images = 300%) */
           height: 100%;
           align-items: center;
-          gap: 40px;
-          padding-right: 20px;
-          padding-left: 20px;
-          animation: rotateBanner 30s infinite; /* 12-second total loop duration */
+          gap: 20px;
+          padding-right: 10px;
+          padding-left: 10px;
+          animation: rotateBanner 20s infinite; /* total loop duration */
       }
 
       /* Individual Images */
@@ -99,8 +146,29 @@ a.toplinks {
           75%, 95% { transform: translateX(-75%); }   /* Image 4 */
           100% { transform: translateX(0); }              /* Loops back smoothly */
       }
-</style>
+  </style>
 </head>
+
+<nav class="topnav">
+  <div class="logo">Kopania Lab</div>
+  
+  <!-- Checkbox hack method or a button with JS -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="join.html">Join Us!</a></li>
+  </ul>
+</nav>
+
 
 <body>
 <a class="toplinks" href="index.html">Home</a>
