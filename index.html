@@ -62,46 +62,35 @@ a.toplinks {
 
 <title>Hamburger navigation menu for mobile</title>
   <style>
-      /* Style the hamburger navigation menu for mobile*/
-      .topnav {
-        overflow: hidden;
-        background-color: #333;
-        position: relative;
-      }
-
-      /* Hide the links inside the navigation menu (except for logo/home) */
-      .topnav #myLinks {
+      .hamburger {
         display: none;
+        flex-direction: column;
+        cursor: pointer;
       }
 
-      /* Style navigation menu links */
-      .topnav a {
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
+      .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 4px 0;
       }
 
-      /* Style the hamburger menu */
-      .topnav a.icon {
-        background: black;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
+      /* Mobile styles */
+      @media screen and (max-width: 768px) {
+        .hamburger {
+          display: flex; /* Show hamburger on mobile */
+        }
 
-      /* Add a grey background color on mouse-over */
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
+        .nav-links {
+          display: none; /* Hide links initially */
+          flex-direction: column;
+          width: 100%;
+        }
 
-      /* Style the active link (or home/logo) */
-      .active {
-        background-color: #04AA6D;
-        color: white;
+        /* Show menu when checkbox is checked */
+        #menu-toggle:checked ~ .nav-links {
+          display: flex;
+        }
       }
   </style>
 
@@ -150,15 +139,15 @@ a.toplinks {
 </head>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<nav class="topnav">
+<nav class="hamburger">
   <div class="logo">Kopania Lab</div>
-  <div id="myLinks">
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="team.html">Team</a>
-    <a href="join.html">Join Us!</a>
-  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="join.html">Join Us!</a></li>
+  </ul>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
 </nav>
