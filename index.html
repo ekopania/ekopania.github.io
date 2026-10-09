@@ -60,40 +60,6 @@ a.toplinks {
 }
 </style>
 
-<title>Hamburger navigation menu for mobile</title>
-  <style>
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-      }
-
-      .hamburger .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        margin: 4px 0;
-      }
-
-      /* Mobile styles */
-      @media screen and (max-width: 768px) {
-        .hamburger {
-          display: flex; /* Show hamburger on mobile */
-        }
-
-        .nav-links {
-          display: none; /* Hide links initially */
-          flex-direction: column;
-          width: 100%;
-        }
-
-        /* Show menu when checkbox is checked */
-        #menu-toggle:checked ~ .nav-links {
-          display: flex;
-        }
-      }
-  </style>
-
 <title>CSS-Only Rotating Banner</title>
   <style>
       /* Slider Wrapper */
@@ -137,21 +103,6 @@ a.toplinks {
       }
   </style>
 </head>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<nav class="hamburger">
-  <div class="logo">Kopania Lab</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="join.html">Join Us!</a></li>
-  </ul>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-</nav>
-
 
 <body>
 <a class="toplinks" href="index.html">Home</a>
